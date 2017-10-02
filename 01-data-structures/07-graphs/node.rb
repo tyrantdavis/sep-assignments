@@ -6,7 +6,6 @@ class Node
 
   def initialize
     @name = name
-    @film_actor_hash = film_actor_hash
     @films = []
     @viewed = false
   end
