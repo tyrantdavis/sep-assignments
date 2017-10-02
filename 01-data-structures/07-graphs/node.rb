@@ -8,6 +8,6 @@ class Node
     @name = name
     @film_actor_hash = film_actor_hash
     @films = []
-    @viewed = viewed
+    @viewed = false
   end
 end
