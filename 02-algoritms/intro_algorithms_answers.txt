@@ -1,0 +1,99 @@
+Tip & Total
+
+READ check
+	IF check == 0 THEN
+		It is on the house. Say Thank You
+		RETRUN a big smile!
+	END IF
+
+	IF check > 0 THEN
+		SET total = INPUT check
+		EVALUATE/ READ service received
+		DETERMINE tip percentage based on Evaluation
+
+		CASE service OF
+			Awful		: tip_percent = 0
+			Poor 		: tip_percent = 5
+			Marginal 	: tip_percent = 10
+			Good		: tip_percent = 15
+			Great		: tip_percent = 18
+			Awesome 	: tip_percent = 20
+		END CASE
+
+		READ total
+    INPUT total
+			CALL multiplication operation on total
+		INPUT tip_percent
+		INPUT percent sign
+		READ tip_percent
+		READ percent sign
+		COMPUTE product of total and tip_percent
+		SET tip = INPUT COMPUTE product
+		CALL round(to 2 places) on tip
+		DISPLAY tip
+			CALL addition on total and tip
+			SET total = CALL addition on total and tip
+			READ total
+		DISPLAY total
+	END  IF
+
+
+
+
+
+AREA OF A SQUARE
+
+START
+EVALUATE square
+
+
+INIT x
+SET x = INPUT length of a side
+READ x
+	IF x == 0 THEN
+		print “A square with sides of 0 is technically a square, but no one will ever see how square it is. ”
+	ELSE
+	SET area = x * x
+	READ area
+	DISPLAY area
+	END IF
+
+
+
+
+
+What To Wear
+what_to_wear?(temperature)
+	INPUT temperature
+	READ temperature
+		IF temperature > 80 THEN
+			PRINT It’s hot.
+
+			put_on(shorts)
+			put_on(tank top)
+			put_on(flops)
+		ELSE IF temperature > 70
+			PRINT It’s warm.
+
+			put_on(shorts)
+			put_on(tee shirt)
+			put_on(sneakers)
+		ELSE IF temperature > 50
+			PRINT It’s cool.
+
+			put_on(jeans)
+			put_on(tee shirt)
+			put_on(socks)
+			put_on(sneakers)
+			put_on(jacket)
+		ELSE
+			PRINT It’s cold.
+
+			put_on(jeans)
+			put_on(under shirt)
+			put_on(sweater)
+			put_on(socks)
+			put_on(boots)
+			put_on(coat)
+		END IF
+END what_to_wear?
