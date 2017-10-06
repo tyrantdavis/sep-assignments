@@ -1,4 +1,4 @@
-def fib(n)
+def iterative_fib(n)
     return n if n < 2
   fib_zero = 0
   fib_one = 1
@@ -10,14 +10,14 @@ def fib(n)
   end
   return fib_one
 end
-
-puts fib(0)
-puts fib(1)
-puts fib(2)
-puts fib(3)
-puts fib(4)
-puts fib(5)
-puts fib(6)
-puts fib(7)
-puts fib(8)
-puts fib(9)
+puts iterative_fib(20)
+# puts iterative_fib(0)
+# puts iterative_fib(1)
+# puts iterative_fib(2)
+# puts iterative_fib(3)
+# puts iterative_fib(4)
+# puts iterative_fib(5)
+# puts iterative_fib(6)
+# puts iterative_fib(7)
+# puts iterative_fib(8)
+# puts iterative_fib(9)
