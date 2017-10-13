@@ -21,14 +21,22 @@ midpoint of the collection and the last item of the collection. O(log n) or Big-
 https://docs.google.com/spreadsheets/d/e/2PACX-1vT7Kvyr-NWDvdJIaAafV2sdCOQvQPpgiM7kktwE4Hluy7gogJlAEUTuR-5xDptDZAgwX1zt666DqZuG/pubhtml
 
 6. What is the limit of the function above as n approaches infinity?
-The limit of 2 to the nth power, as n approaches infinity, is positive infinity.
-lim f( 2^n ) = ∞
+The limit of log n, as n approaches infinity, is infinity.
+lim ( log n ) = ∞
 n --> ∞
 
-7. It has a complexity of O( 2^ n ) or Big-O of exponential time.
-For example:
-n is 4 => 2^4 worse case is 16 iterations to find target.
-n is 6 => 2^6 worse case is 64 iterations to find target.
+7. What is the Big-O of an algorithm that has the data points above?
+It has a complexity of O( log n ) or Big-O of logarithmic time. As n doubles # of iterations
+increase by 1.
+For example: n = number of elements in collection
+^ = to the power of
+n is 64 => log₂ n => log₂ (64), as 64 = 2 ^ 6. Worse case is 6 iterations to find target.
+n is 32 => log₂ n => log₂ (32), as 32 = 2 ^ 5. Worse case is 5 iterations to find target.
+n is 64 => log₂ n => log₂ (16), as 16 = 2 ^ 4. Worse case is 4 iterations to find target.
+n is 8 => log₂ n => log₂ (8), as 8 = 2 ^ 3. Worse case is 3 iterations to find target.
+n is 4 => log₂ n => log₂ (4), as 4 = 2 ^ 2. Worse case is 2 iterations to find target.
+n is 2 => log₂ n => log₂ (2), as 2 = 2 ^ 1. Worse case is 1 iterations to find target.
+n is 1 => log₂ n => log₂ (1), as 1 = 2 ^ 0. Worse case is 0 iterations to find target.
 
 8. see iterations.rb
 
