@@ -1,0 +1,45 @@
+1. Describe an analogy for relating an algorithm that has efficiency O(1) and another algorithm that
+ has O(2n).
+A: An algorithm that has O(1) is a Porsche. An algorithm that has O(2^n) is a tractor.
+A: An algorithm that has O(1) is the theoretical Big Bang. An algorithm that has O(2^n) is
+the coalescence of matter i.e the formation of stars, planets, elements, etc... following the Big Bang.
+
+
+2. In plain English, what is the best case scenario for binary search?
+A: Best case for a Binary Search is that the search item or target is at the midpoint of a given
+collection.  In such a case search performance is O(1) or Big-O of constant time.
+
+3. In plain English, what is the worst case scenario for binary search?
+A: Worst case for a Binary Search is the search item / target is the last element
+of a collection. In this case search performance is O(log n ) or Big-O of logarithmic time.
+
+4. In plain English, what is the bounded-case scenario for binary search?
+A: The bounded/ average case for Binary Search is that the search item/ target falls between the
+midpoint of the collection and the last item of the collection. O(log n) or Big-O logarithmic time.
+
+5.
+https://docs.google.com/spreadsheets/d/e/2PACX-1vT7Kvyr-NWDvdJIaAafV2sdCOQvQPpgiM7kktwE4Hluy7gogJlAEUTuR-5xDptDZAgwX1zt666DqZuG/pubhtml
+
+6. What is the limit of the function above as n approaches infinity?
+The limit of 2 to the nth power, as n approaches infinity, is positive infinity.
+lim f( 2^n ) = ∞
+n --> ∞
+
+7. It has a complexity of O( 2^ n ) or Big-O of exponential time.
+For example:
+n is 4 => 2^4 worse case is 16 iterations to find target.
+n is 6 => 2^6 worse case is 64 iterations to find target.
+
+8. see iterations.rb
+
+9.
+https://docs.google.com/spreadsheets/d/e/2PACX-1vT7Kvyr-NWDvdJIaAafV2sdCOQvQPpgiM7kktwE4Hluy7gogJlAEUTuR-5xDptDZAgwX1zt666DqZuG/pubhtml
+
+10. What is the Big-O of binary search?
+A: Big-O logarithmic time; O(log n)
+
+11. What is the Big-Ω of binary search?
+A: Big-O constant time; O(1)
+
+12. What is the Big-Ө of binary search?
+A: Big-O logarithmic time; O(log n)
