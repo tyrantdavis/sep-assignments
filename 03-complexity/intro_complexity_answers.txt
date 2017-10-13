@@ -39,7 +39,7 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vT7Kvyr-NWDvdJIaAafV2sdCOQvQPpgi
 A: Big-O logarithmic time; O(log n)
 
 11. What is the Big-Ω of binary search?
-A: Big-O constant time; O(1)
+A: Big-Ω constant time; Ω(1)
 
 12. What is the Big-Ө of binary search?
-A: Big-O logarithmic time; O(log n)
+A: Big-Ө  logarithmic time; Ө(log n)
