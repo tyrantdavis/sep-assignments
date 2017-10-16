@@ -1,0 +1,28 @@
+1. What's the Big-O of the goodbye_world algorithm? See goodbye_world.rb
+A: Program execution time will always be the same irrespective of n's value / input size. O(1) or
+Big-O of constant time.
+
+2. What's the Big-O of the find_largest algorithm? See find_largest.rb
+A: find_largest iterates over the entire collection. If the target item is in the collection, worst case is
+ that it is the last element of the collection. As the collection grows the # of iterations / operations
+ grows at the same rate. N items = N iterations. Performance is O(n) or Big-O of linear time.
+
+3. What's the Big-O of the following algorithm? See find_largest_2D_array.rb
+A: This algorithm nests two loops. If an array has n items, the outer loop runs n times, and the
+inner(nested) loop runs n times for each iteration of the outer loop for a total of n^2 prints.
+Performance is O(n^2) Big-O of quadratic time.
+
+4. What's the Big-O of the following algorithm?
+A: Given that exponents and logarithms are inverse operations T(n) = n = 2log_2(n) ==> 2^n.
+For n >= 2 the function recursively calls itself 2^n times.
+For example: n = 1,  2n = 2 calls, n = 2, 2n = 4 calls.  n = 4, 2n = 16 calls , etc...
+Performance is O(2^n) Big-O of exponential time.
+
+5. What's the Big-O of the following algorithm?
+Performance is O(n). The number of iterations is determined by the size of N. As N grows so does
+the iterations at a 1 to 1 ratio or constant time.
+
+6 What's the Big-O of the following algorithm?
+This quick sort algorithm iterates over n elements, partitions into 2 unsorted sub-collections, defined
+ as left and right sides and based on a pivot point, then makes recursive calls on the
+ sub-collections. Performance is O(n^2).
