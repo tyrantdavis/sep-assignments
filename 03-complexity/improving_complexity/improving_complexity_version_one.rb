@@ -1,3 +1,4 @@
+require 'benchmark'
 # This method takes n arrays as input and combine them in sorted ascending  order
 def improved_poorly_written_ruby(*arrays)
   sorted = []
