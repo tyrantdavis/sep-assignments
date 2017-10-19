@@ -1,0 +1,53 @@
+1. Describe an analogy for relating an algorithm that has efficiency O(1) and another algorithm that
+ has O(2n).
+A: An algorithm that has O(1) is a Porsche. An algorithm that has O(2^n) is a tractor.
+A: An algorithm that has O(1) is the theoretical Big Bang. An algorithm that has O(2^n) is
+the coalescence of matter i.e the formation of stars, planets, elements, etc... following the Big Bang.
+
+
+2. In plain English, what is the best case scenario for binary search?
+A: Best case for a Binary Search is that the search item or target is at the midpoint of a given
+collection.  In such a case search performance is O(1) or Big-O of constant time.
+
+3. In plain English, what is the worst case scenario for binary search?
+A: Worst case for a Binary Search is the search item / target is the last element
+of a collection. In this case search performance is O(log n ) or Big-O of logarithmic time.
+
+4. In plain English, what is the bounded-case scenario for binary search?
+A: The bounded/ average case for Binary Search is that the search item/ target falls between the
+midpoint of the collection and the last item of the collection. O(log n) or Big-O logarithmic time.
+
+5.
+https://docs.google.com/spreadsheets/d/e/2PACX-1vT7Kvyr-NWDvdJIaAafV2sdCOQvQPpgiM7kktwE4Hluy7gogJlAEUTuR-5xDptDZAgwX1zt666DqZuG/pubhtml
+
+6. What is the limit of the function above as n approaches infinity?
+The limit of log n, as n approaches infinity, is infinity.
+lim ( log n ) = ∞
+n --> ∞
+
+7. What is the Big-O of an algorithm that has the data points above?
+It has a complexity of O( log n ) or Big-O of logarithmic time. As n doubles # of iterations
+increase by 1.
+For example: n = number of elements in collection
+^ = to the power of
+n is 64 => log₂ n => log₂ (64), as 64 = 2 ^ 6. Worse case is 6 iterations to find target.
+n is 32 => log₂ n => log₂ (32), as 32 = 2 ^ 5. Worse case is 5 iterations to find target.
+n is 64 => log₂ n => log₂ (16), as 16 = 2 ^ 4. Worse case is 4 iterations to find target.
+n is 8 => log₂ n => log₂ (8), as 8 = 2 ^ 3. Worse case is 3 iterations to find target.
+n is 4 => log₂ n => log₂ (4), as 4 = 2 ^ 2. Worse case is 2 iterations to find target.
+n is 2 => log₂ n => log₂ (2), as 2 = 2 ^ 1. Worse case is 1 iterations to find target.
+n is 1 => log₂ n => log₂ (1), as 1 = 2 ^ 0. Worse case is 0 iterations to find target.
+
+8. see iterations.rb
+
+9.
+https://docs.google.com/spreadsheets/d/e/2PACX-1vT7Kvyr-NWDvdJIaAafV2sdCOQvQPpgiM7kktwE4Hluy7gogJlAEUTuR-5xDptDZAgwX1zt666DqZuG/pubhtml
+
+10. What is the Big-O of binary search?
+A: Big-O logarithmic time; O(log n)
+
+11. What is the Big-Ω of binary search?
+A: Big-Ω constant time; Ω(1)
+
+12. What is the Big-Ө of binary search?
+A: Big-Ө  logarithmic time; Ө(log n)
