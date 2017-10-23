@@ -1,6 +1,5 @@
 def quick_sort(collection)
   return collection if collection.length <= 1
-# arr1 = ['e', 'c', 'a', 'b', 'f', 'g', 'd']
   pivot = collection.delete_at(collection.length - 1)
   left = []
   right = []
