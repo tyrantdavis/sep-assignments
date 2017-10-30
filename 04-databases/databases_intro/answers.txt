@@ -1,0 +1,94 @@
+1. Given the values table below, what data types do each of these values represent?
+Answer: 'A Clockwork Orange' is string data type,
+42 is an integer, 09/02/1945 is a date, 98.7 is a float, and 15.99 is a numeric value.
+
+2. Explain in your own words when a database might be used. Explain when a text file might be
+used.
+Answer: A database is collection of data that is stored and arranged in a manner that allows for easy
+retrieval and manipulation of data.
+Examples include an invitation list, playoffs bracket, phone book, health records, employee records
+
+Explain when a text file might be used.
+Answer: When you have a relatively small data sets to store, when you need data to persist outside
+of memory and an application, when there is no concern for multiple applications accessing and
+manipulating the data simultaneously.
+
+3. Describe one difference between SQL and other programming languages.
+SQL is a declarative language which means that you declare what data you want returned
+without determining the process for doing so. Many languages are procedural which means a
+process is defined along with the exact steps to execute the desired result.
+
+SQL uses a single ' = ' sign for equality as opposed to ' == '
+
+4. In your own words, explain how the pieces of a database system fit together at a high level.
+Databases use a table structure with  vertical columns that define what the data represents, and
+horizontal rows that contain values for the data represented. At each column and row intersection
+is a cell which contains a value described by its column name.
+
+5. Explain the meaning of table, row, column, and value.
+Databases use a table structure with  vertical columns that define what the data represents, and
+horizontal rows that contain values for the data represented. At each column and row intersection
+is a cell which contains a value described by its column name. A table has particular number of
+columns, but can have any number of rows.
+
+6. List 3 data types that can be used in a table.
+Answer: string, integer, float, object
+
+7. Given the payments table below, provide an English description and the results for the queries:
+  1.      SELECT date, amount
+         FROM payments;
+  I am looking for the date and the amounts FROM the payments table. Or, return date and amount
+  FROM the payments table.
+
+Result: date                      amount
+        5/1/2016              1500.00
+        5/10/2016            37.00
+        5/15/2016            124.93
+        5/23/2016             54.72
+
+
+  2.     SELECT amount
+        FROM payments
+        WHERE amount > 500;
+  I am looking for an amount FROM the payments table WHERE the amount is greater than 500.
+  Or, FROM payments return any payment amount greater than 500.
+
+  Results: amount
+              1500
+
+  3.     SELECT *
+        FROM payments
+        WHERE payee = "Mega Foods";
+
+  I am looking for all data FROM the payments table WHERE the payee is Mega Foods. Or, return
+  all data on the payee Mega Foods.
+
+  Result: date          payee          amount       memo
+        5/15/2016 Mega Foods  124.93      Groceries
+
+
+8. Given the users table below, write the following SQL queries and their results:
+  1. Select the email and sign-up date for the user named DeAndre Data.
+  SELECT email, signup
+  FROM users
+  WHERE name = 'DeAndre Data'
+
+  Result:         email                                                 signup
+            datad@comcast.net                               2008-01-20
+
+  2. Select the user ID for the user with email 'aleesia.algorithm@uw.edu'.
+  SELECT userid
+  FROM users
+  WHERE email =  'aleesia.algorithm@uw.edu'
+
+  Result: userid
+              1
+
+  3. Select all the columns for the user ID equal to 4.
+  SELECT *
+  FROM users
+  WHERE userid = 4
+
+  Result:
+  userid	name	                        email                    signup
+    4      Brandy Boolean  bboolean@nasa.gov    1999-10-15
