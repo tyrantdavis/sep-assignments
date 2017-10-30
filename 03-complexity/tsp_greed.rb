@@ -6,28 +6,26 @@ end
 # DEF nearest possible neighbor(graph_of_cities, current_city)
 def nearest_possible_neighbor(graph_of_cities, current_city)
   path = [current_city.name]
-
   while !graph_of_cities[0].nil?
-    next_town = graph_of_cities[0]
-
-    graph_of_cities.each do |option|
-     distance_calc(current_city, next_town) > distance_calc(current_city, option)
-        next_town = option
+    next_city = graph_of_cities[0]
+    graph_of_cities.each do |i|
+      if distance_calc(current_city, next_city) > distance_calc(current_city, i)
+        next_city = i
+      end
     end
-    current_city = next_town
-    graph_of_cities.delete(next_town)
-    path << current_city.name
+    current_city = next_city
+    graph_of_cities.delete(next_city)
+    path.push(current_city.name)
   end
   path
 end
-
-home = City.new("irvine", 0, 0)
-city2 = City.new("boise", 1, 9)
-city3 = City.new("seattle", 0, 9)
-city4 = City.new("london", 22, 10)
+home = City.new("orlando", 0, 0)
+city2 = City.new("atlanta", 1, 10)
+city3 = City.new("jacksonville", 0, 10)
+city4 = City.new("paris", 22, 11)
 city5 = City.new("new york", 10, 10)
-city6 = City.new("budapest", 25, 8)
-city7 = City.new("atlanta", 10, 0)
+city6 = City.new("Morocco", 24, 56)
+city7 = City.new("Charlotte", 9, 11)
 
 city_graph = [city2, city4, city3, city7, city6, city5]
 p "city2: #{city2}"
