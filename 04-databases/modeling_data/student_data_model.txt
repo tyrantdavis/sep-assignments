@@ -1,0 +1,33 @@
+
+Q2. Design a data model for students and the classes they have taken. The model should include the
+students' grades for a given class.
+
+  1. What classes/entities are need?
+  Entities: student, transcript, course
+
+  2. What attributes/fields will each entity need?
+  STUDET ENTITY: STUDENT ID, FIRST NAME, LAST NAME, ADDRESS, CITY, STATE, ZIP,
+  PHONE, TRANSID, MAJOR, MINOR.
+
+  TRANSCRIPT ENTITY: transid, student id, courseid, final grade
+
+  3. What data types are need?
+  Student: integer, text, varchar
+
+  4. What relationships exist between entities?
+  each student has one transcript which has / can have many courses
+
+  5. How should these relationships be represented in tables.
+  student has a one to one relationship with transcript which has a one to many relation with
+  courses.
+
+Draw the model using the notation used in the checkpoint and submit a picture.
+simple: https://app.quickdatabasediagrams.com/#/schema/ab3EjLPqi0mwKA9Xx8Zd1w
+
+extended: https://app.quickdatabasediagrams.com/#/schema/mSLb26RBak2mQpepG60FgA
+
+
+Q3. see students.sql
+
+Build a database for the students/classes data model. Create a SQL file that creates the tables and
+inserts sample data.
