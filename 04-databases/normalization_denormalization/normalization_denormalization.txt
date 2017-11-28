@@ -47,6 +47,9 @@ things. See model.
 The inventory table maps stores to products and provides a unique combination of storeid and
 productid.
 
+BCNF: all data in a table must depend only on that table’s primary key, and not on any other field
+in the table. 
+
 3. The student_records table below shows the students and their grades in different subjects. The table
  is already in first normal form (1NF). Convert this table to the third normal form (3NF) using the
  techniques you learned in this checkpoint.
