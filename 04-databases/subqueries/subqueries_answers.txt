@@ -1,0 +1,11 @@
+1.  Explain a subquery in your own words.
+2.  Where can you use a subquery within a SELECT statement?
+3.  When would you employ a subquery?
+4.  Explain a row constructor in your own words.
+5.  What happens if a row in the subquery result provides a NULL value to the comparison?
+6.  What are the ways to use a subquery within a WHERE clause?
+8.
+9.
+10.
+11.
+12.
