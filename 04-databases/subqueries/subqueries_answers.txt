@@ -1,11 +1,39 @@
 1.  Explain a subquery in your own words.
+A query nested within another query which can be found in the SELECT, WHERE, or FROM
+clause. I can also be nested inside an INSERT, UPDATE, SELECT, or DELETE statement.
+
 2.  Where can you use a subquery within a SELECT statement?
+Inside another SELECT statement. The subquery is usually embedded in the WHERE clause, but
+can be in the SLELCT and FROM clauses.
+
 3.  When would you employ a subquery?
+When you want to  retrieve data from one table based on a condition on data from another table.
+Ex: compare an expression to query results, establish if the results of a query include an expression,
+see if any rows are returned from a query.
+
 4.  Explain a row constructor in your own words.
+A row constructor constructs a row of composite data or values, referred to as a row value, which
+are assigned to fields as output. It compares  a pre-constructed/ pre-determined row to a subquery
+which aims to return a match.
+
 5.  What happens if a row in the subquery result provides a NULL value to the comparison?
+The result will be NULL.
+
 6.  What are the ways to use a subquery within a WHERE clause?
-8.
-9.
-10.
-11.
-12.
+row constructor or an expression.
+
+7. Build an employees table and a shifts table with appropriate primary and foreign keys. Then,
+write queries to find the following information: List all employees and all shifts. Create a list of all
+possible schedules. SEE employees.sql
+
+8.   See pets.sql
+9.   See pets.sql
+10. See books.sql
+11. See airliners.sql
+
+12. Compare the subqueries you've written above. Compare them to the joins you wrote in
+Checkpoint 6. Which ones are more readable? Which were more logical to write?
+
+ In my opinion which is more logical or readable varies. I some situations I found subqueries to be
+ most succinct while finding joins to be more eloquent and understandable in others. There were
+ instances where I found them equal as well.  
