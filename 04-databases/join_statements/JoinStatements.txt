@@ -1,0 +1,89 @@
+6 JOIN STATEMENTS
+
+1. How do you find data that is held in two separate data tables?
+Answer: By employing a join query.
+
+2. Explain, in your own words, the difference between a CROSS JOIN, INNER JOIN, LEFT
+ OUTER JOIN, RIGHT OUTER JOIN, and FULL OUTER JOIN. Give a real world example for
+ each.
+
+INNER JOIN: requires the rows from table1 and table2 to have matching column values resulting in
+a new table that combines the columns values of each table based on the join condition and returns
+one row on the new table for commons rows between the queried tables.
+Example: see what department employees are assigned to based on id.
+
+OUTER JOIN: produces a joined table where every row is retained even if a row from table1 has
+no matching row in table2.
+
+LEFT OUTER JOIN: Retains all records from table1 of the linked tables. If no matching rows from
+ table2 are found, in table1, a row is still returned for table2 with a value of NULL.
+Example: select all customers and their orders from using a 'customers' table and  an 'orders' table
+referencing 'customer_id' as the join.
+
+RIGHT OUTER JOIN: Retains all records from table2 of the linked tables. If no matching rows
+from table1 are found, in table2, a row is still returned for table1 with a value of NULL.
+Example: return the department name for each employee based on department id from an
+employees table and a department table.
+
+FULL OUTER JOIN: returns all records from the queried tables placing a value of NULL in the
+columns were no match is found in the opposing table.
+Example: return products that have product codes and product codes not assigned to products.
+
+CROSS JOIN: Returns a table with rows that are a product / combination of each row from table1
+with each row from table2. Example: see what department employees are assigned to.
+Example: return all possible interior and exterior color combinations from exterior_color table and
+an interior_color table.   SELECT * FROM exterior_color CROSS JOIN interior_color;
+
+3. Define primary key and foreign key. Give a real world example for each.
+Primary Key: a table field which uniquely ids each record/row in a database table. Must contain
+unique values.
+
+FOREIGN KEY: a key used to link tables together by referencing a primary key.
+
+Example: link a customers table to an orders table using customer_id as the Primary Key in the
+parent table and customer_id as the Foreign KEY in the child table.
+
+4. Define aliasing: process of giving a table or a column a temporary name in a query. The name is
+usually a single letter.
+
+5. Change this query so that you are using aliasing:
+SELECT p.name, c.salary, c.vacation_days
+FROM professor AS p
+JOIN compensation AS c
+ON p.id = c.professor_id;
+
+6. Why would you use a NATURAL JOIN? Give a real world example.
+Use as a shorthand to a USING list when you want to return column names present in both tables.
+
+7. see employees.sql
+
+Result:
+employee   | shiftid
+-------------+---------
+Jason Kiddz |       1
+Jane Right  |       1
+Anna Houz   |       3
+Cary Moss   |       1
+Karen Mason |       2
+Terry Crews |       2
+Jenny Jones |       3
+
+
+Result:
+ schedule
+----------------
+8:15pm-4:45am
+8:00pm-4:00am
+4:15am-12:45pm
+4:00am-12:30pm
+12:15pm-8:45pm
+12:00pm-8:30pm
+
+8. see pets.sql
+
+
+9. Write a query to find the name of the person who adopted Seashell
+- see pets.sql
+
+
+10. see books.sql
