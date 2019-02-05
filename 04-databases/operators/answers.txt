@@ -1,0 +1,168 @@
+1. SELECT <column1>
+   FROM table;
+
+             SELECT <*> --- selects all columns
+             FROM table
+(optional) WHERE <where condition>;
+
+2. Create a fun way to remember the order of operations in a SELECT statement, such as a
+mnemonic. ScFt = SELECTcolumnFROMtable
+
+3.
+CREATE DATABASE pets;
+
+CREATE TABLE IF NOT EXISTS dogs(
+id                    integer         SERIAL       PRIMARY KEY,
+name              varchar(30),
+gender            varchar(6),
+age                  integer,
+weight             integer,
+intake_date     date,             --YYYY-MM-DD
+breed               varchar(30),
+in_foster          date             --YYYY-MM-DD
+);
+
+
+SELECT name, gender, age
+FROM dogs
+WHERE breed LIKE '%labrador%';
+
+Results:
+name  | gender | age
+--------+--------+-----
+Boujee | F      |   3
+Marley | M      |   0
+
+
+SELECT id
+FROM dogs
+WHERE age < 1;
+
+Results:
+id
+-------
+10002
+10004
+
+SELECT name, age
+FROM dogs
+WHERE gender = 'F'
+AND weight > 35;
+
+Results:
+name  | age
+--------+-----
+Boujee |   3
+
+SELECT *
+FROM dogs
+WHERE breed NOT LIKE '%shepherd%'
+
+Results:
+id       |   name          | gender | age     | weight |       breed                   | intake_date  | in_foster
+-------+-----------+--------+-----+--------+----------------------+-------------+------------+---------------
+10001 | Boujee         | F         |   3      |     36     | labrador poodle          | 2017-06-22  |
+10002 | Munchkin    | F         |   0      |      8      | dachsund chihuahua  | 2017-01-13  | 2017-01-31
+10004 | Marley         | M       |   0      |     10      | labrador                     | 2017-05-04  | 2016-06-20
+10006 | Marmaduke | M       |   7      |    150     | great dane                  | 2016-03-22  | 2016-05-15
+10007 | Rosco          | M       |   5      |    180     | rottweiler                   | 2017-04-01  |
+
+
+
+SELECT id, age, weight, breed
+FROM dogs
+WHERE breed LIKE "%Great Dane%"
+OR weight > 60;
+
+Results:
+id   | age | weight |   breed
+-------+-----+--------+------------
+10006 |   7 |    150 | great dane
+10007 |   5 |    180 | rottweiler
+
+
+4. From the cats table below, what pieces of data would be returned from these queries?
+SELECT name, adoption_date FROM cats;
+Returns:
+Mushi     2016-03-22
+Seashell  NULL
+Azul       2016-04-17
+Victoire  2016-09-01
+Nala      NULL
+
+SELECT name, age FROM cats;
+Returns:
+Mushi      1
+Seashell   7
+Azul        3
+Vitoire     7
+Nala        1
+
+
+
+5. From the cats table, write queries to select the following pieces of data.
+Display all the information about all of the available cats.
+SELECT * FROM CATS;
+
+Choose one cat of each age to show to potential adopters.
+SELECT *
+FROM cats
+WHERE gender = 'M';
+
+Find all of the names of the cats, so you don’t choose duplicate names for new cats.
+SELECT DISTINCT names
+FROM cats;
+
+6. List each comparison operator and explain, in your own words, when you would use it.
+Include a real world example for each.
+
+< less than; use when comparing objects, numbers or expressions. determines if the left operand is
+less than the right operand.
+
+<= less than or equal to; use to determine if the left operand is less than or equal to the right operand.
+
+> greater than; use when comparing objects, numbers or expressions. determines if the left operand
+is greater than the right operand.
+>= greater than or equal to; use to determine if the left operand is greater than or
+equal to the right operand.
+
+= equal to; use to determine if an object, number, or expression is equal to another.
+
+AND; use when both expression must be true in order for the data to be returned.
+
+OR;  use when ONE expression must be true in order for the data to be returned.
+
+NOT; use when an expression is expected to be false in order for the data to be returned.
+
+!=  or <> Not equal to; tests for inequality; use when comparing 2 values and one value is
+expected to not equal the other.
+
+
+LIKE; use to execute partial or pattern matches for strings.
+BETWEEN; use to determine if an object is within the bounds of two other objects.
+IS DISTINCT FROM; use when comparing two values. Replaces != or <>. Returns true or false.
+
+IS TRUE / IS FALSE; use to determine if an expression is TRUE or FALSE when the value or input
+could be NULL.
+
+IS NULL; use to determine if a object or cell is empty
+
+
+
+7. From the cats table below, what data would be returned from these queries?
+SELECT name FROM cats WHERE gender = ‘F’;
+Returns:
+Seashell
+Nala
+
+SELECT name FROM cats WHERE age <> 3;
+Returns:
+Mushi
+Seashell
+Victoire
+Nala
+
+SELECT ID FROM cats WHERE name != ‘Mushi’ AND gender = ‘M’;
+Returns:
+00003
+00004
