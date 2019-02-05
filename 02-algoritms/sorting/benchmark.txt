@@ -1,0 +1,5 @@
+See Graph @ link below.
+https://docs.google.com/spreadsheets/d/e/2PACX-1vSQRoVUu3SlK01QUhqabhxCTozrzp37K8dn2kQYZ7jQDhAMBJr7KbB_no1LPo_Av2Cbe9Kbn4vFLpOv/pubhtml
+
+The method used by each algorithm to organize, i.e. breakup / split, the data set prior to sorting is
+dictating the speed at which each performs.
