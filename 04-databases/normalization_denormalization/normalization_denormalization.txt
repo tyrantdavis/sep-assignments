@@ -1,0 +1,74 @@
+1. In your own words, explain the benefits of normalization. Include a real-world scenario where
+normalization is necessary.
+Answer: mitigates data duplication by eliminating redundancy, reduces mistakes when updating data,
+makes updating more efficient by allowing increased concurrency. It also reduces data irregularities
+, enforces referential integrity on data, and groups data logically.
+Products, Stores, Inventory Model:
+
+PRODUCTS          |
+productid         |
+productname   |
+price
+
+STORES
+storeid
+store
+
+
+INVENTORY
+storeid
+productid
+
+
+2. List and explain the different normal forms and how they relate to one another, with regard to your
+real-world scenario in the first question.
+
+INF: Columns/ fields with multiple values are a violation, and every row should be unique. Imagine
+a supplier table, included in the above mentioned scenario,  with supplierid, suppliername, and
+products as attributes and products was populated with multiple values in one cell. To solve this
+products needs a separate table which references the supplierid in the supplirers table. Now there is
+a way of tracking what products belongs to what suppliers, and creating a new row for every new
+product without violating 1NF.
+
+2NF: Must be in 1NF, and have no partial key dependencies. Meaning any values outside of the
+composite key of the table must be completely dependent upon all columns of the composite key.
+No calculated feilds i.e. TOTAL are allowed when you have already stored quantity and price.
+
+Take the PRODUCTS table from above for example. If a store attribute is
+added to the PRODUCTS table it would be a violation. Price is dependent on productid and
+productname but not store. The price will be the same regardless of store. To solve add the store
+and productname attributes to the STORES table. Now in the PRODUCTS table price is product
+dependent and productname is store dependent in the STORES table. Keep in mind that product
+does not merely depend on store.
+
+3NF: Must be in 2NF, and all columns depend solely on the primary key. Removes transitive
+dependencies or things that do not belong together need to be separated because they are separate
+things. See model.
+The inventory table maps stores to products and provides a unique combination of storeid and
+productid.
+
+BCNF: all data in a table must depend only on that table’s primary key, and not on any other field
+in the table. 
+
+3. The student_records table below shows the students and their grades in different subjects. The table
+ is already in first normal form (1NF). Convert this table to the third normal form (3NF) using the
+ techniques you learned in this checkpoint.
+Professor: professorid, professor_name
+Student: studentid, student_email, student_name
+Transcript: entry_id, studentid, professor_name, subject, grade
+
+4. In your own words, explain the potential disadvantages of normalizing the data above. What are its
+trade-offs? Discuss this with your mentor.
+Disadvantages include decreasing database performance do to numerous JOINS, requires detailed analysis, and is complex
+and costly to design.
+
+5. Looking at the tables you have normalized. If you need to denormalize to improve query
+performance or speed up reporting, how would you carry out denormalization for this database
+design? Discuss potential strategies with your mentor.
+
+-Add productname to all tables
+-Group prices
+-Remove unique rows
+
+6. Discuss the trade-offs between data normalization and denormalization in this scenario with your
+mentor.
