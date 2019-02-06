@@ -1,38 +1,37 @@
-def sort(collection, from=0, to=nil)
- if to == nil
-   # Sort the whole collection, by default
-   to = collection.count - 1
+def sort(collection, start=0, finish=nil)
+ if finish == nil
+   finish = collection.count - 1
  end
 
- if from >= to
+ if start >= finish
    # Done sorting
    return
  end
 
  # Take a pivot value, at the far left
- pivot = collection[from]
+ pivot = collection[start]
 
  # Min and Max pointers
- min = from
- max = to
+ min = start
+ max = finish
 
- # Current free slot
- free = min
+ # Current open slot
+ vacant = min
 
  while min < max
-   if free == min # Evaluate collection[max]
+   if vacant == min # Evaluate collection[max]
      if collection[max] <= pivot # Smaller than pivot, must move
-       collection[free] = collection[max]
+       collection[vacant] = collection[max]
        min += 1
-       free = max
+       vacant = max
      else
        max -= 1
      end
-   elsif free == max # Evaluate collection[min]
+   elsif vacant == max # Evaluate collection[min]
      if collection[min] >= pivot # Bigger than pivot, must move
-       collection[free] = collection[min]
+       collection[vacant] = collection[min]
        max -= 1
-       free = min
+       vacant = min
      else
        min += 1
      end
@@ -41,10 +40,10 @@ def sort(collection, from=0, to=nil)
    end
  end
 
- collection[free] = pivot
+ collection[vacant] = pivot
 
- sort collection, from, free - 1
- sort collection, free + 1, to
+ sort collection, start, vacant - 1
+ sort collection, vacant + 1, finish
 
  collection
 end

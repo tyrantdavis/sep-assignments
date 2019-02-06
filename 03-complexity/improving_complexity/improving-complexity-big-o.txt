@@ -1,4 +1,4 @@
-For poorly_written_ruby the inital loop performs at O(n). The suceeding nested loops places every
+For poorly_written_ruby the initial loop performs at O(n). The succeeding nested loops places every
 element from the combined_array into the sorted_array and performs at O(n^2). Together the
 performance is n + n^2 => O(n^2).
 

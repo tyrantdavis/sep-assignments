@@ -1,4 +1,3 @@
-# Sorts an array using bucket sort.
 def bucketSort(array, bucket_size = 5)
   if array.size < 2
     return array
@@ -31,23 +30,20 @@ def bucketSort(array, bucket_size = 5)
 end
 
 def insertionSort(collection)
-  # #1
+
   sorted_collection = [collection.delete_at(0)]
 
   for val in collection
     sorted_collection_index = 0
-    # #2
+
     while sorted_collection_index < sorted_collection.length
       if val <= sorted_collection[sorted_collection_index]
-        # #3
         sorted_collection.insert(sorted_collection_index, val)
         break
       elsif sorted_collection_index == sorted_collection.length - 1
-        # #4
         sorted_collection.insert(sorted_collection_index + 1, val)
         break
       end
-
       sorted_collection_index += 1
     end
   end

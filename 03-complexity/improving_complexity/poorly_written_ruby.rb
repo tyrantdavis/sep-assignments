@@ -1,4 +1,3 @@
-# This method takes n arrays as input and combine them in sorted ascending  order
 def poorly_written_ruby(*arrays)
   combined_array = []
   arrays.each do |array|
@@ -22,7 +21,5 @@ def poorly_written_ruby(*arrays)
       i+=1
     end
   end
-
-  # Return the sorted array
   sorted_array
 end

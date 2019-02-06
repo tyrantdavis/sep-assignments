@@ -3,7 +3,7 @@ require_relative 'city'
 def distance_calc(city1, city2)
   return Math.sqrt( (city2.x - city1.x)**2 + (city2.y - city1.y)**2 )
 end
-# DEF nearest possible neighbor(graph_of_cities, current_city)
+
 def nearest_possible_neighbor(graph_of_cities, current_city)
   path = [current_city.name]
   while !graph_of_cities[0].nil?

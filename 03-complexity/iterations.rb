@@ -1,5 +1,3 @@
-# iterations.rb
-
 def iterations(n)
   puts "Worst-Case Linear Search\v"
   print "n"

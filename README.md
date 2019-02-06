@@ -59,8 +59,6 @@
 ***
 ##  [Data-Structues](https://github.com/tyrantdavis/sep-assignments/tree/master/01-data-structures)
 
-<!-- https://github.com/tyrantdavis/sep-assignments/tree/master/01-data-structures/ -->
-
 [Intro To Data Structures](https://github.com/tyrantdavis/sep-assignments/tree/master/01-data-structures/01-introduction-to-data-structures)
 
   * [Line](https://github.com/tyrantdavis/sep-assignments/tree/master/01-data-structures/01-introduction-to-data-structures/line)
@@ -75,11 +73,6 @@
 
 [Linked Lists](https://github.com/tyrantdavis/sep-assignments/tree/master/01-data-structures/03-linked-lists)
 
-  <!-- * [Node](https://github.com/tyrantdavis/sep-assignments/tree/master/01-data-structures/03-linked-lists/node.rb)
-
-  * [Linked List](https://github.com/tyrantdavis/sep-assignments/tree/master/01-data-structures/03-linked-lists/linked_list.rb)
-
-  * [Spec](https://github.com/tyrantdavis/sep-assignments/tree/master/01-data-structures/03-linked-lists/linked_list_spec.rb) -->
 
 [Hashes 1](https://github.com/tyrantdavis/sep-assignments/tree/master/01-data-structures/04-hashes-part-1)
 
